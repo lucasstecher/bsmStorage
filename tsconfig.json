@@ -3,14 +3,18 @@
     "lib": ["ES2022"],
     "module": "ES2022",
     "target": "ES2022",
-    "allowJs": true,
+    "declaration": true,
+    "sourceMap": true,
+    "incremental": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
     "strictPropertyInitialization": false,
     "types": ["node"],
@@ -31,5 +35,5 @@
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
-}
+  }
 }
