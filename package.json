@@ -12,7 +12,8 @@
     "dev": "tsx watch src/index.ts",
     "test": "jest",
     "format": "prettier --write \"**/*.ts\"",
-    "lint": "eslint ./src/**/*.ts --fix"
+    "lint": "eslint ./src/**/*.ts --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "amqplib": "^0.10.3",
