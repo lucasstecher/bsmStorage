@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Storage {
+  id          Int        @id @default(autoincrement())
+  quadrant    String     @unique @db.VarChar(255)
+  designation String     @db.VarChar(255)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  Quadrant    Quadrant[]
+}
+
+model Quadrant {
+  id            Int    @id @default(autoincrement())
+  item          String @db.VarChar(255)
+  item_quantity Int    @db.Integer()
+
+  storage             Storage @relation(fields: [quadrantCoordenates], references: [quadrant])
+  quadrantCoordenates String
+}
