@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DB_URL")
 }
 
 model Storage {
@@ -17,10 +17,9 @@ model Storage {
 }
 
 model Quadrant {
-  id            Int    @id @default(autoincrement())
-  item          String @db.VarChar(255)
-  item_quantity Int    @db.Integer()
-
-  storage             Storage @relation(fields: [quadrantCoordenates], references: [quadrant])
+  id                  Int      @id @default(autoincrement())
+  item                String   @db.VarChar(255)
+  item_quantity       Int      @db.Integer()
+  storage             Storage  @relation(fields: [quadrantCoordenates], references: [quadrant])
   quadrantCoordenates String
 }
