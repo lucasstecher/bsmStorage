@@ -1,11 +1,8 @@
-const { off } = require('process');
-
 module.exports = {
   env: {
     es2021: true,
     node: true
   },
-  extends: 'standard-with-typescript',
   overrides: [
     {
       files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
@@ -24,7 +21,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/return-await': 'off',
-    '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/indent': 'off',
